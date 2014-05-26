@@ -25,7 +25,7 @@ end
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem 'jbuilder', '~> 2.0'
+
 
 group :production do
 gem 'pg' 
