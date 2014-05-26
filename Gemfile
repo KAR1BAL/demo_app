@@ -4,8 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 
-group :production do
-gem 'pg' 
+group :development do
+gem 'sqlite3'
 end
 
 # Use SCSS for stylesheets
@@ -14,6 +14,7 @@ end
 
 group :assets do
 gem 'sass-rails', '~> 4.0.3'
+
 gem 'coffee-rails', '~> 4.0.0'
 
 gem 'uglifier', '>= 1.3.0'
@@ -26,7 +27,9 @@ end
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 
-
+group :production do
+gem 'pg' 
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
