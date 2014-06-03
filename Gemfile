@@ -3,10 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 
-group :development do
-	gem 'pg'
-end
-
 # Use SCSS for stylesheets
 # Use CoffeeScript for .js.coffee assets and views
 
@@ -21,6 +17,11 @@ end
 # Use jquery as the JavaScript library
 gem 'rails_12factor', group: :production
 gem 'jquery-rails'
+gem 'rb-readline'
+
+group :production do
+	gem 'pg'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
