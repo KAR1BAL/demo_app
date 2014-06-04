@@ -3,14 +3,22 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 
+group :development do
+	gem 'sqlite3'
+end
+
 # Use SCSS for stylesheets
 # Use CoffeeScript for .js.coffee assets and views
 
 group :assets do
-	gem 'sass-rails', '~> 4.0.3'
-	gem 'coffee-rails', '~> 4.0.0'
+	gem 'sass-rails', '4.0.3'
+	gem 'coffee-rails', '4.0.0'
 
-	gem 'uglifier', '>= 1.3.0'
+	gem 'uglifier', '1.3.0'
+end
+
+group :production do
+	gem 'pg'
 end
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -18,10 +26,6 @@ end
 gem 'rails_12factor', group: :production
 gem 'jquery-rails'
 gem 'rb-readline'
-
-group :production do
-	gem 'pg'
-end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
